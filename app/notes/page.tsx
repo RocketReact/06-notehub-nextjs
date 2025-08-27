@@ -11,7 +11,6 @@ export default async function TasksPage() {
     queryKey: ['notes', search, page],
     queryFn: () => fetchNotes({ search, page }),
   });
-
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <NotesClient />;
