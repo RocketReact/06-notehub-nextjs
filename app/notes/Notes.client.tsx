@@ -43,7 +43,7 @@ function NotesClient() {
       <div className={css.app}>
         <div className={css.toolbar}>
           <SearchBox onSearchChange={handleSearch} />
-          {data && data.notes.length > 1 && (
+          {data && data.totalPages > 1 && (
             <Pagination
               currentPage={page}
               totalPages={data.totalPages}
